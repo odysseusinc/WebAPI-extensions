@@ -1,5 +1,6 @@
 package org.ohdsi.webapi.extensions.criteria.locationdistance;
 
+import org.ohdsi.circe.cohortdefinition.builders.BuilderUtils;
 import org.ohdsi.circe.cohortdefinition.builders.VisitOccurrenceBuilder;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class VisitOccurrenceBuilderExperimental extends VisitOccurrenceBuilder<V
             joinClauses.add(
                     "JOIN @cdm_database_schema.LOCATION_DISTANCE LD on LD.person_location_id = personLH.location_id " +
                             "AND LD.care_site_location_id = LH.location_id " +
-                            "AND " + buildNumericRangeClause("LD.distance", criteria.placeOfServiceDistance) + " "
+                            "AND " + BuilderUtils.buildNumericRangeClause("LD.distance", criteria.placeOfServiceDistance) + " "
             );
         }
 
