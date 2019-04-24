@@ -1,11 +1,11 @@
 package org.ohdsi.webapi.extensions.criteria.locationdistance;
 
 import org.ohdsi.circe.cohortdefinition.builders.BuilderUtils;
-import org.ohdsi.circe.cohortdefinition.builders.VisitOccurrenceBuilder;
+import org.ohdsi.circe.cohortdefinition.builders.VisitOccurrenceSqlBuilder;
 
 import java.util.List;
 
-public class VisitOccurrenceBuilderExperimental extends VisitOccurrenceBuilder<VisitOccurrence> {
+public class VisitOccurrenceSqlBuilderExperimental extends VisitOccurrenceSqlBuilder<VisitOccurrence> {
 
     @Override
     protected List<String> resolveJoinClauses(VisitOccurrence criteria) {

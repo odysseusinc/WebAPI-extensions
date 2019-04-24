@@ -12,6 +12,6 @@ public class VisitOccurrence extends org.ohdsi.circe.cohortdefinition.VisitOccur
     @Override
     public String accept(IGetCriteriaSqlDispatcher dispatcher) {
 
-        return new VisitOccurrenceBuilderExperimental().getCriteriaSql(this);
+        return new VisitOccurrenceSqlBuilderExperimental().getCriteriaSql(this);
     }
 }
